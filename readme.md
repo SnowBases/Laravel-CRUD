@@ -27,6 +27,18 @@
 
 git clone `https://github.com/SnowBases/Laravel-CRUD`
 
+`cd Laravel-CRUD`
+
+`composer install`
+
+`cp .env.example .env`and edit the MySQL connection
+
+`php artisan key:generate`
+
+`php artisan config:clear`
+
+`php artisan config:cache`
+
 `php artisan make:migration create_biodatas_table`
 
 `database` > `migration` > `table.php`
