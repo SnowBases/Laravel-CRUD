@@ -7,6 +7,44 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Requirement
+
+1. Composer
+2. XAMPP v3.2.2
+- PHP = 7.2.9
+- OpenSSL PHP Extension
+- PDO PHP Extension
+- Mbstring PHP Extension
+- Tokenizer PHP Extension
+- XML PHP Extension
+- Ctype PHP Extension
+- JSON PHP Extension
+- BCMath PHP Extension
+
+- MySQL Ver 15.1 Distrib 10.1.35-MariaDB, for Win32 (AMD64)
+
+## First Step
+
+git clone `https://github.com/SnowBases/Laravel-CRUD`
+
+`php artisan make:migration create_biodatas_table`
+
+`database` > `migration` > `table.php`
+
+    public function up()
+        {
+            Schema::create('biodatas', function (Blueprint $table) {
+                $table->increments('id');
+                $table->string('namaSiswa');
+                $table->text('alamatSiswa');
+                $table->timestamps();
+            });
+        }
+
+`php artisan make:migrate`
+
+`php artisan serve`
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
